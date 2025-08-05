@@ -25,7 +25,8 @@ bot = Bot(token=BOT_TOKEN)
 while True:
     for video in videos:
         try:
-            caption = f"*{video['title']}*
+            caption = f"*{video['title']}*\n{video['desc']}\n[▶️ Watch Here]({video['link']})"
+
 {video['desc']}
 [▶️ Watch Here]({video['link']})"
             bot.send_photo(
